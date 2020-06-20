@@ -1,1 +1,164 @@
-/* No CSS *//*# sourceMappingURL=game.css.map */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #181818;
+  color: #fff;
+}
+
+.header .gridrow {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 75% 25%;
+      grid-template-rows: 75% 25%;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header .gridrow .firstgridrow {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 50% 25%;
+      grid-template-columns: 25% 50% 25%;
+  width: 95%;
+  height: 85%;
+  margin: auto;
+}
+
+.header .gridrow .firstgridrow .center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 3px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto auto 5% auto;
+  width: 100%;
+  height: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .gridrow .firstgridrow .center h2 {
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+.header .gridrow .firstgridrow .left, .header .gridrow .firstgridrow .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .gridrow .firstgridrow .left .flexleft, .header .gridrow .firstgridrow .left .flexcenter, .header .gridrow .firstgridrow .left .flexright, .header .gridrow .firstgridrow .right .flexleft, .header .gridrow .firstgridrow .right .flexcenter, .header .gridrow .firstgridrow .right .flexright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+.header .gridrow .firstgridrow .left .flexleft h2, .header .gridrow .firstgridrow .left .flexcenter h2, .header .gridrow .firstgridrow .left .flexright h2, .header .gridrow .firstgridrow .right .flexleft h2, .header .gridrow .firstgridrow .right .flexcenter h2, .header .gridrow .firstgridrow .right .flexright h2 {
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+.header .gridrow .firstgridrow .left .flexleft h2:first-child, .header .gridrow .firstgridrow .left .flexcenter h2:first-child, .header .gridrow .firstgridrow .left .flexright h2:first-child, .header .gridrow .firstgridrow .right .flexleft h2:first-child, .header .gridrow .firstgridrow .right .flexcenter h2:first-child, .header .gridrow .firstgridrow .right .flexright h2:first-child {
+  margin: 0 10% 0 0;
+}
+
+.header .gridrow .firstgridrow .left .flexleft .title, .header .gridrow .firstgridrow .left .flexcenter .title, .header .gridrow .firstgridrow .left .flexright .title, .header .gridrow .firstgridrow .right .flexleft .title, .header .gridrow .firstgridrow .right .flexcenter .title, .header .gridrow .firstgridrow .right .flexright .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .gridrow .firstgridrow .left .flexleft .goods, .header .gridrow .firstgridrow .left .flexleft .wrongs, .header .gridrow .firstgridrow .left .flexcenter .goods, .header .gridrow .firstgridrow .left .flexcenter .wrongs, .header .gridrow .firstgridrow .left .flexright .goods, .header .gridrow .firstgridrow .left .flexright .wrongs, .header .gridrow .firstgridrow .right .flexleft .goods, .header .gridrow .firstgridrow .right .flexleft .wrongs, .header .gridrow .firstgridrow .right .flexcenter .goods, .header .gridrow .firstgridrow .right .flexcenter .wrongs, .header .gridrow .firstgridrow .right .flexright .goods, .header .gridrow .firstgridrow .right .flexright .wrongs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10% auto 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .gridrow .firstgridrow .left .flexleft .goods p, .header .gridrow .firstgridrow .left .flexleft .wrongs p, .header .gridrow .firstgridrow .left .flexcenter .goods p, .header .gridrow .firstgridrow .left .flexcenter .wrongs p, .header .gridrow .firstgridrow .left .flexright .goods p, .header .gridrow .firstgridrow .left .flexright .wrongs p, .header .gridrow .firstgridrow .right .flexleft .goods p, .header .gridrow .firstgridrow .right .flexleft .wrongs p, .header .gridrow .firstgridrow .right .flexcenter .goods p, .header .gridrow .firstgridrow .right .flexcenter .wrongs p, .header .gridrow .firstgridrow .right .flexright .goods p, .header .gridrow .firstgridrow .right .flexright .wrongs p {
+  margin: 2% 0 0 0;
+}
+
+.header .gridrow .secondgridrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .gridrow .secondgridrow button {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 16px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0 5%;
+}
+
+.header .gridrow .secondgridrow button:last-child {
+  padding: 7px 32px;
+  letter-spacing: 1px;
+  font-size: 2.7rem;
+}
+
+#guessy {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #fff;
+}
+/*# sourceMappingURL=game.css.map */
