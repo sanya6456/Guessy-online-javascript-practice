@@ -45,25 +45,36 @@ body{
                         }
                     }
                 }
-                .image{
+                a{
+                    text-decoration: none;
                     display: flex;
                     flex-direction: column;
-                    width: 100%;
-                    height: 85%;
-                    margin: auto;
-                    img{
-                        height: auto;
-                        margin: auto;
-                    }
-                }
-                .titlesection{
-                    display: flex;
-                    flex-direction: column;
-                    margin: auto;
-                    width: 100%;
-                    height: 15%;
                     justify-content: center;
                     align-items: center;
+                    margin: auto;
+                    color: white;
+                    width: 100%;
+                    height: 100%;
+                    .image{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        height: 85%;
+                        margin: auto;
+                        img{
+                            height: auto;
+                            margin: auto;
+                        }
+                    }
+                    .titlesection{
+                        display: flex;
+                        flex-direction: column;
+                        margin: auto auto 0 auto;
+                        width: 100%;
+                        height: 15%;
+                        justify-content: center;
+                        align-items: center;
+                    }
                 }
             }
         }
