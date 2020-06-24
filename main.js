@@ -43,26 +43,6 @@ $(document).ready(function(){
         }, fewSeconds*1000);
 
 
-        //Game time!! //60sec
-        /*var tme=0;
-        var cntbck=5;
-
-        setTimeout(countbacktimeout,3000);
-
-        function countbacktimeout(){
-
-            setInterval(countbacktime,1000);
-            function countbacktime(){
-                    tme++;
-                    $('#timer').html(cntbck-tme);
-                    if(cntbck-tme==0){
-                        alert('fasz');
-                        //$('#gamestart').hide(200);
-                    }
-                }
-            }
-        }*/
-
         
         //click button go to next question
         $('.btn').click(function(){
@@ -71,6 +51,40 @@ $(document).ready(function(){
             });
         });
     });
+
+            //Game time!! //60sec
+            /*var tme=0;
+            var cntbck=5;
+    
+            setTimeout(countbacktimeout,3000);
+    
+            function countbacktimeout(){
+    
+                setInterval(countbacktime,1000);
+                function countbacktime(){
+                        tme++;
+                        $('#timer').html(cntbck-tme);
+                        if(cntbck-tme==0){
+                            alert('fasz');
+                            //$('#gamestart').hide(200);
+                        }
+                    }
+                }
+            }*/
+
+            var tme=0;
+            var cntbck=5;
+
+            setTimeout(function(){
+                setInterval(function(){
+                    tme++;
+                    $('#timer').html(cntbck-tme);
+                    if(cntbck-tme==0){
+                        $('#gamestart').hide();
+                        $('.grid').show();
+                    }
+                },1000);
+            },3000);
 
 
 });
