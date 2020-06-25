@@ -248,6 +248,14 @@ body {
   margin: 2% 0 0 0;
 }
 
+.header .gridrow .firstgridrow .left .flexleft .goods, .header .gridrow .firstgridrow .left .flexcenter .goods, .header .gridrow .firstgridrow .left .flexright .goods, .header .gridrow .firstgridrow .right .flexleft .goods, .header .gridrow .firstgridrow .right .flexcenter .goods, .header .gridrow .firstgridrow .right .flexright .goods {
+  color: green;
+}
+
+.header .gridrow .firstgridrow .left .flexleft .wrongs, .header .gridrow .firstgridrow .left .flexcenter .wrongs, .header .gridrow .firstgridrow .left .flexright .wrongs, .header .gridrow .firstgridrow .right .flexleft .wrongs, .header .gridrow .firstgridrow .right .flexcenter .wrongs, .header .gridrow .firstgridrow .right .flexright .wrongs {
+  color: red;
+}
+
 .header .gridrow .secondgridrow {
   display: -webkit-box;
   display: -ms-flexbox;

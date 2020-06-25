@@ -1,12 +1,34 @@
 $(document).ready(function(){
-
     $('#gamestart').hide();
+
 
     $('#car').click(function(){
 
         //Game types:
         // 1. car brands
-        var carbrands=['Audi','Bmw','Maserati','McLaren','Ford'];
+        var carbrands=['Audi','Bmw','Maserati','McLaren','Ford'];  
+        var uniquecarbrands=[];
+        var count=0;
+        var found=false;
+
+        //click button go to next question
+        $('.btn').click(function(){
+            $('#guessy').html(function(){
+                for(i=0; i<carbrands.length; i++){
+                    for(y=0; y<uniquecarbrands.length; y++){
+                        if(carbrands[i]==uniquecarbrands[y]){
+                            found=true;
+                        }
+                    }
+                    count++;
+                    if(count==1 && found==false){
+                        uniquecarbrands.push(carbrands[i]);
+                    }
+                    count=0;
+                    found=false;
+                }
+            });
+        });
 
         //Ready, Steady, Go! function
         var counter=0;
@@ -29,12 +51,6 @@ $(document).ready(function(){
             }
         };
 
-        //click button go to next question
-        $('.btn').click(function(){
-            $('#guessy').html(function(){
-                return carbrands[Math.floor(Math.random() * carbrands.length)];
-            });
-        });
     }); //  <-- this is the end of #car .click!
 
 
@@ -87,6 +103,10 @@ $(document).ready(function(){
 
         dbg++;
         $('#goodcounter').html(dbg);
+
+        if(dbg==20){
+            $('.btn-success').prop('disabled','true');
+        }
     });
 
     $('.btn-danger').click(function(){
@@ -95,6 +115,10 @@ $(document).ready(function(){
 
         dbb++;
         $('#wrongcounter').html(dbb);
+
+        if(dbb==20){
+            $('.btn-danger').prop('disabled','true');
+        }
     });
 
 
