@@ -6,26 +6,28 @@ $(document).ready(function(){
 
         //Game types:
         // 1. car brands
-        var carbrands=['Audi','Bmw','Maserati','McLaren','Ford'];  
-        var uniquecarbrands=[];
-        var count=0;
-        var found=false;
+        var carbrands=['Audi','Bmw','Maserati','McLaren','Ford','Abarth'];  
+        var outputcar=[];
+        count=0;
+        var start=false;
 
         //click button go to next question
         $('.btn').click(function(){
             $('#guessy').html(function(){
-                for(i=0; i<carbrands.length; i++){
-                    for(y=0; y<uniquecarbrands.length; y++){
-                        if(carbrands[i]==uniquecarbrands[y]){
-                            found=true;
+                for(i=0;i<carbrands.length;i++){
+                    var j;
+                    for(j=0;j<outputcar.length;j++){
+                        if(carbrands[i]==outputcar[j]){
+                            start=true;
                         }
                     }
                     count++;
-                    if(count==1 && found==false){
-                        uniquecarbrands.push(carbrands[i]);
+                    if(count==1 && start==false){
+                        outputcar.push(carbrands[j])
+                        return outputcar[j];
                     }
+                    start=false;
                     count=0;
-                    found=false;
                 }
             });
         });
@@ -46,16 +48,26 @@ $(document).ready(function(){
             } if(timer==4){
                 //Carbrands Game!!
                 $('#guessy').html(function(){
-                    return carbrands[Math.floor(Math.random() * carbrands.length)];
+                    for(i=0;i<carbrands.length;i++){
+                        var j;
+                        for(j=0;j<outputcar.length;j++){
+                            if(carbrands[i]==outputcar[j]){
+                                start=true;
+                            }
+                        }
+                        count++;
+                        if(count==1 && start==false){
+                            outputcar.push(carbrands[j])
+                            return outputcar[j];
+                        }
+                        start=false;
+                        count=0;
+                    }
                 });
             }
         };
 
     }); //  <-- this is the end of #car .click!
-
-
-
-
 
 
 
@@ -93,6 +105,7 @@ $(document).ready(function(){
 
 
     });// <-- this is the end of union functions
+
 
     //add results to .goods or .wrongs
     var dbg=0;
