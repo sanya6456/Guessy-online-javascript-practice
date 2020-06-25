@@ -3,10 +3,6 @@ $(document).ready(function(){
     $('#gamestart').hide();
 
     $('#car').click(function(){
-        $('.grid').hide();
-        $('#gamestart').show();
-    
-
 
         //Game types:
         // 1. car brands
@@ -15,9 +11,7 @@ $(document).ready(function(){
         //Ready, Steady, Go! function
         var counter=0;
         var timer;
-
         setInterval(time,1000);
-
         function time(){
             counter++;
             timer=counter;
@@ -34,6 +28,43 @@ $(document).ready(function(){
                 });
             }
         };
+
+        //click button go to next question
+        $('.btn').click(function(){
+            $('#guessy').html(function(){
+                return carbrands[Math.floor(Math.random() * carbrands.length)];
+            });
+        });
+    }); //  <-- this is the end of #car .click!
+
+
+
+
+
+
+
+    // Union functions!! ****************
+    $('.col').click(function(){
+
+        $('.grid').hide();
+        $('#gamestart').show();
+
+        //Game time!! //60sec
+        var tme=0;
+        var cntbck=60;
+
+        setTimeout(function(){
+            setInterval(function(){
+                tme++;
+                $('#timer').html(cntbck-tme);
+                if(cntbck-tme==0){
+                    alert('Az idő lejárt!');
+                    $('#gamestart').hide();
+                    $('.grid').show();
+                }
+            },1000);
+        },3000);
+
         //disable buttons for 4s
         var fewSeconds = 4;
 
@@ -43,48 +74,28 @@ $(document).ready(function(){
         }, fewSeconds*1000);
 
 
-        
-        //click button go to next question
-        $('.btn').click(function(){
-            $('#guessy').html(function(){
-                return carbrands[Math.floor(Math.random() * carbrands.length)];
-            });
-        });
+
+
+    });// <-- this is the end of union functions
+
+    //add results to .goods or .wrongs
+    var dbg=0;
+    var dbb=0;
+    $('.btn-success').click(function(){
+        var result=$('#guessy').html();
+        $('.goods').append('<p>'+result+'</p>');
+
+        dbg++;
+        $('#goodcounter').html(dbg);
     });
 
-            //Game time!! //60sec
-            /*var tme=0;
-            var cntbck=5;
-    
-            setTimeout(countbacktimeout,3000);
-    
-            function countbacktimeout(){
-    
-                setInterval(countbacktime,1000);
-                function countbacktime(){
-                        tme++;
-                        $('#timer').html(cntbck-tme);
-                        if(cntbck-tme==0){
-                            alert('fasz');
-                            //$('#gamestart').hide(200);
-                        }
-                    }
-                }
-            }*/
+    $('.btn-danger').click(function(){
+        var result=$('#guessy').html();
+        $('.wrongs').append('<p>'+result+'</p>');
 
-            var tme=0;
-            var cntbck=5;
-
-            setTimeout(function(){
-                setInterval(function(){
-                    tme++;
-                    $('#timer').html(cntbck-tme);
-                    if(cntbck-tme==0){
-                        $('#gamestart').hide();
-                        $('.grid').show();
-                    }
-                },1000);
-            },3000);
+        dbb++;
+        $('#wrongcounter').html(dbb);
+    });
 
 
 });
