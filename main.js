@@ -6,7 +6,7 @@ $(document).ready(function(){
 
         //Game types:
         // 1. car brands
-        var carbrands=['Audi','Bmw','Maserati','McLaren','Ford','Abarth'];  
+        var carbrands=['Audi','Bmw','Maserati','Ford','Abarth','Fiat','McLaren','Aston Martin','Chevrolet','Alfa Romeo','Chrysler','Citroen','Dacia','Daewoo','Dodge','Ferrari','Honda','Hyundai','Jaguar','KIA','Lada','Lexus','Lancia','Lamborghini','Land Rover','Lotus','Maserati','Mazda','Mercades-AMG','Mercedes-Benz','Mini','Mitsubishi','Moszkvics','Nissan','Opel','Peugeot','Porsche','Renault','Rolls-Rolls','Rover','SAAB','Seat','Skoda','Subaru','Suzuki','Tesla','Toyota','Trabant','UAZ','Volkswagen','Volvo','Wartburg','Bugatti'];  
         var outputcar=[];
         count=0;
         var start=false;
@@ -24,11 +24,11 @@ $(document).ready(function(){
                     count++;
                     if(count==1 && start==false){
                         outputcar.push(carbrands[j])
-                        return outputcar[j];
                     }
                     start=false;
                     count=0;
                 }
+                return outputcar[j];
             });
         });
 
