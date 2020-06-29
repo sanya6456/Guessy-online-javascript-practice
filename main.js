@@ -306,6 +306,7 @@ $(document).ready(function(){
                 $('#timer').html(cntbck-tme);
                 if(cntbck-tme==0){
                     alert('Az idő lejárt!');
+                    location.reload();
                     $('#gamestart').hide();
                     $('.grid').show();
                 }
