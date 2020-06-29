@@ -64,6 +64,24 @@ body{
                     height: 15%;
                     justify-content: center;
                     align-items: center;
+                    h2{
+                        font-size: 2rem;
+                        @media only screen and(max-width:680px){
+                            font-size: 1.7rem;
+                        }
+                        @media only screen and(max-width:590px){
+                            font-size: 1.5rem;
+                        }
+                        @media only screen and(max-width:520px){
+                            font-size: 1.3rem;
+                        }
+                        @media only screen and(max-width:480px){
+                            font-size: 1.1rem;
+                        }
+                        @media only screen and(max-width:400px){
+                            font-size: 1rem;
+                        }
+                    }
                 }
             }
         }

@@ -100,6 +100,40 @@ body {
           align-items: center;
 }
 
+.header .grid .row .col .titlesection h2 {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 680px) {
+  .header .grid .row .col .titlesection h2 {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .header .grid .row .col .titlesection h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .header .grid .row .col .titlesection h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header .grid .row .col .titlesection h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header .grid .row .col .titlesection h2 {
+    font-size: 1rem;
+  }
+}
+
 .header .gridrow {
   display: -ms-grid;
   display: grid;

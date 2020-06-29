@@ -353,10 +353,6 @@ $(document).ready(function(){
         if(dbb==17){
             $('.btn-danger').prop('disabled','true');
         }
-
-        /*$('.flexcenter').animate({borderColor: "#000"},300, function(){
-            $(this).after().css('border-color','white');
-        });*/
     });
 
 
