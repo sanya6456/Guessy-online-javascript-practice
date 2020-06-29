@@ -192,6 +192,100 @@ $(document).ready(function(){
         };
     }); //  <-- this is the end of #movie .click!
 
+    $('#superhero').click(function(){
+        
+        //Game types:
+        // 1. car brands
+        var superheroes=['Loki','Deadpool','Peter Parker','Hulk','Pókember','Tony Stark','Vasember','Superman','Fekete özvegy','Logan','Thor','Amerika kapitány','Marvel kapitány','Batgirl','Darázs','Polaris','Batman','Superman','Wonder Woman','Mr. Irdatlan','Nyúlányka','Supergirl','Furi','Fridzsiman','A tél katonája','Drax - a romboló','Mordály','Loki','Herkules','Aquaman','Boomer','Marvel kapitány','Kronosz','Zöldíjász','Zöld lámpás','Joker','Karate Kölyök','Kaszás','Robin','Penge','A bosszúállók','Fekete Párduc','X professzor','Optimus Prime','Tini nindzsa teknőcök','Venom','Fantasztikus négyes'];  
+        var outputsuperheroes=[];
+
+        var z=0;
+        var u=superheroes.length;
+
+        //click button go to next question
+        $('.btn').click(function(){
+            $('#guessy').html(function(){
+                while(u--){
+                    z=Math.floor(Math.random()*(u+1));
+                    outputsuperheroes.push(superheroes[z]);
+                    return superheroes.splice(z,1);
+                }
+            });
+        });
+
+        //Ready, Steady, Go! function
+        var counter=0;
+        var timer;
+        setInterval(time,1000);
+        function time(){
+            counter++;
+            timer=counter;
+            if(timer==1){
+                $('#guessy').html('Ready!');
+            } if (timer==2) {
+                $('#guessy').html('Steady!');
+            } if(timer==3) {
+                $('#guessy').html('Go!');
+            } if(timer==4){
+                //Carbrands Game!!
+                $('#guessy').html(function(){
+                    while(u--){
+                        z=Math.floor(Math.random()*(u+1));
+                        outputsuperheroes.push(superheroes[z]);
+                        return superheroes.splice(z,1);
+                    }
+                });
+            }
+        };
+    }); //  <-- this is the end of #superhero .click!
+
+    $('#country').click(function(){
+        
+        //Game types:
+        // 1. car brands
+        var countries=['Argentína','Andorra','Ausztrália','Ausztria','Brazília','Bulgária','Ciprus','Csehország','Dánia','Dél-afrikai Köztársaság','Korea','USA','Egyesült Királyság','Egyiptom','Finnország','Franciaország','Görögország','Hollandia','Horvátország','India','Izland','Irak','Írország','Japán','Kanada','Kína','Kolumbia','Lengyelország','Luxemburg','Madagaszkár','Magyarország','Mexikó','Németország','Olaszország','Oroszország','Portugália','Románia','Spanyolország','Svájc','Svédország','Szlovákia','Szlovénia','Törökország','Uruguay','Vatikán','Vietnám','Venezuels'];  
+        var outputcountries=[];
+
+        var z=0;
+        var u=countries.length;
+
+        //click button go to next question
+        $('.btn').click(function(){
+            $('#guessy').html(function(){
+                while(u--){
+                    z=Math.floor(Math.random()*(u+1));
+                    outputcountries.push(countries[z]);
+                    return countries.splice(z,1);
+                }
+            });
+        });
+
+        //Ready, Steady, Go! function
+        var counter=0;
+        var timer;
+        setInterval(time,1000);
+        function time(){
+            counter++;
+            timer=counter;
+            if(timer==1){
+                $('#guessy').html('Ready!');
+            } if (timer==2) {
+                $('#guessy').html('Steady!');
+            } if(timer==3) {
+                $('#guessy').html('Go!');
+            } if(timer==4){
+                //Carbrands Game!!
+                $('#guessy').html(function(){
+                    while(u--){
+                        z=Math.floor(Math.random()*(u+1));
+                        outputcountries.push(countries[z]);
+                        return countries.splice(z,1);
+                    }
+                });
+            }
+        };
+    }); //  <-- this is the end of #country .click!
+
 
 
 
@@ -236,27 +330,33 @@ $(document).ready(function(){
     var dbg=0;
     var dbb=0;
     $('.btn-success').click(function(){
+        //write results
         var result=$('#guessy').html();
         $('.goods').append('<p>'+result+'</p>');
-
+        //count results
         dbg++;
         $('#goodcounter').html(dbg);
-
+        //limit clicks to 17
         if(dbg==17){
             $('.btn-success').prop('disabled','true');
         }
     });
 
     $('.btn-danger').click(function(){
+        //write results
         var result=$('#guessy').html();
         $('.wrongs').append('<p>'+result+'</p>');
-
+        //count results
         dbb++;
         $('#wrongcounter').html(dbb);
-
+        //limit clicks to 17
         if(dbb==17){
             $('.btn-danger').prop('disabled','true');
         }
+
+        /*$('.flexcenter').animate({borderColor: "#000"},300, function(){
+            $(this).after().css('border-color','white');
+        });*/
     });
 
 
