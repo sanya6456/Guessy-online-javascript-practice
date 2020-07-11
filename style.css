@@ -17,6 +17,158 @@ body {
   background-color: #181818;
 }
 
+.header .resplayout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 65% 15%;
+      grid-template-rows: 20% 65% 15%;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 850px) {
+  .header .resplayout {
+    display: none;
+  }
+}
+
+.header .resplayout .gametime {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  height: 100%;
+  width: 90%;
+}
+
+.header .resplayout .gametime h2 {
+  font-size: 4rem;
+}
+
+.header .resplayout .center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto auto 5% auto;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .resplayout .center .flexcenter {
+  border: 3px solid white;
+  width: 70%;
+  height: 40%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 625px) {
+  .header .resplayout .center .flexcenter {
+    width: 70%;
+    height: 35%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header .resplayout .center .flexcenter {
+    width: 80%;
+    height: 35%;
+  }
+}
+
+.header .resplayout .center .flexcenter #guessy {
+  font-size: 4em;
+}
+
+@media only screen and (max-width: 780px) {
+  .header .resplayout .center .flexcenter #guessy {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 625px) {
+  .header .resplayout .center .flexcenter #guessy {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header .resplayout .center .flexcenter #guessy {
+    font-size: 2rem;
+  }
+}
+
+.header .resplayout .secondgridrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.header .resplayout .secondgridrow button {
+  display: block;
+  padding: 8px 20px;
+  border-radius: 16px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0 5%;
+}
+
+@media only screen and (max-width: 625px) {
+  .header .resplayout .secondgridrow button {
+    font-size: 2rem;
+  }
+}
+
+.header .resplayout .secondgridrow button:last-child {
+  padding: 7px 32px;
+  letter-spacing: 1px;
+  font-size: 2.7rem;
+}
+
+@media only screen and (max-width: 625px) {
+  .header .resplayout .secondgridrow button:last-child {
+    font-size: 2.2rem;
+  }
+}
+
 .header .grid {
   display: -ms-grid;
   display: grid;
@@ -193,6 +345,20 @@ body {
           flex-direction: column;
 }
 
+@media only screen and (max-width: 1060px) {
+  .header .gridrow .firstgridrow .center .flexcenter {
+    width: 80%;
+    height: 40%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header .gridrow .firstgridrow .center .flexcenter {
+    width: 75%;
+    height: 30%;
+  }
+}
+
 .header .gridrow .firstgridrow .center .gametime {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,6 +382,12 @@ body {
   font-size: 3rem;
   white-space: nowrap;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 1060px) {
+  .header .gridrow .firstgridrow .center h2 {
+    font-size: 3rem;
+  }
 }
 
 .header .gridrow .firstgridrow .left, .header .gridrow .firstgridrow .right {
@@ -250,6 +422,18 @@ body {
   white-space: nowrap;
 }
 
+@media only screen and (max-width: 1060px) {
+  .header .gridrow .firstgridrow .left .flexleft h2, .header .gridrow .firstgridrow .left .flexcenter h2, .header .gridrow .firstgridrow .left .flexright h2, .header .gridrow .firstgridrow .right .flexleft h2, .header .gridrow .firstgridrow .right .flexcenter h2, .header .gridrow .firstgridrow .right .flexright h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header .gridrow .firstgridrow .left .flexleft h2, .header .gridrow .firstgridrow .left .flexcenter h2, .header .gridrow .firstgridrow .left .flexright h2, .header .gridrow .firstgridrow .right .flexleft h2, .header .gridrow .firstgridrow .right .flexcenter h2, .header .gridrow .firstgridrow .right .flexright h2 {
+    font-size: 1.3rem;
+  }
+}
+
 .header .gridrow .firstgridrow .left .flexleft h2:first-child, .header .gridrow .firstgridrow .left .flexcenter h2:first-child, .header .gridrow .firstgridrow .left .flexright h2:first-child, .header .gridrow .firstgridrow .right .flexleft h2:first-child, .header .gridrow .firstgridrow .right .flexcenter h2:first-child, .header .gridrow .firstgridrow .right .flexright h2:first-child {
   margin: 0 10% 0 0;
 }
@@ -282,6 +466,12 @@ body {
   margin: 2% 0 0 0;
 }
 
+@media only screen and (max-width: 900px) {
+  .header .gridrow .firstgridrow .left .flexleft .goods p, .header .gridrow .firstgridrow .left .flexleft .wrongs p, .header .gridrow .firstgridrow .left .flexcenter .goods p, .header .gridrow .firstgridrow .left .flexcenter .wrongs p, .header .gridrow .firstgridrow .left .flexright .goods p, .header .gridrow .firstgridrow .left .flexright .wrongs p, .header .gridrow .firstgridrow .right .flexleft .goods p, .header .gridrow .firstgridrow .right .flexleft .wrongs p, .header .gridrow .firstgridrow .right .flexcenter .goods p, .header .gridrow .firstgridrow .right .flexcenter .wrongs p, .header .gridrow .firstgridrow .right .flexright .goods p, .header .gridrow .firstgridrow .right .flexright .wrongs p {
+    font-size: 1rem;
+  }
+}
+
 .header .gridrow .firstgridrow .left .flexleft .goods, .header .gridrow .firstgridrow .left .flexcenter .goods, .header .gridrow .firstgridrow .left .flexright .goods, .header .gridrow .firstgridrow .right .flexleft .goods, .header .gridrow .firstgridrow .right .flexcenter .goods, .header .gridrow .firstgridrow .right .flexright .goods {
   color: green;
 }
@@ -311,15 +501,45 @@ body {
   margin: 0 5%;
 }
 
+@media only screen and (max-width: 1060px) {
+  .header .gridrow .secondgridrow button {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .header .gridrow .secondgridrow button {
+    margin: 0 2.5%;
+  }
+}
+
 .header .gridrow .secondgridrow button:last-child {
   padding: 7px 32px;
   letter-spacing: 1px;
   font-size: 2.7rem;
 }
 
+@media only screen and (max-width: 1060px) {
+  .header .gridrow .secondgridrow button:last-child {
+    font-size: 2.2rem;
+  }
+}
+
 #guessy {
   font-size: 3rem;
   font-weight: 500;
   color: #fff;
+}
+
+@media only screen and (max-width: 1060px) {
+  #guessy {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #guessy {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
