@@ -14,7 +14,7 @@ $(document).ready(function(){
 
         //click button go to next question
         $('.btn').click(function(){
-            $('#guessy').html(function(){
+            $('#guessy,#guessy01').html(function(){
                 while(u--){
                     z=Math.floor(Math.random()*(u+1));
                     outputcar.push(carbrands[z]);
@@ -24,6 +24,7 @@ $(document).ready(function(){
         });
 
         //Ready, Steady, Go! function
+
         var counter=0;
         var timer;
         setInterval(time,1000);
@@ -31,14 +32,14 @@ $(document).ready(function(){
             counter++;
             timer=counter;
             if(timer==1){
-                $('#guessy').html('Ready!');
+                $('#guessy,#guessy01').html('Ready!');
             } if (timer==2) {
-                $('#guessy').html('Steady!');
+                $('#guessy,#guessy01').html('Steady!');
             } if(timer==3) {
-                $('#guessy').html('Go!');
+                $('#guessy,#guessy01').html('Go!');
             } if(timer==4){
                 //Carbrands Game!!
-                $('#guessy').html(function(){
+                $('#guessy,#guessy01').html(function(){
                     while(u--){
                         z=Math.floor(Math.random()*(u+1));
                         outputcar.push(carbrands[z]);
@@ -63,7 +64,7 @@ $(document).ready(function(){
 
         //click button go to next question
         $('.btn').click(function(){
-            $('#guessy').html(function(){
+            $('#guessy,#guessy01').html(function(){
                 while(u--){
                     z=Math.floor(Math.random()*(u+1));
                     outputanimals.push(animals[z]);
@@ -80,14 +81,14 @@ $(document).ready(function(){
             counter++;
             timer=counter;
             if(timer==1){
-                $('#guessy').html('Ready!');
+                $('#guessy,#guessy01').html('Ready!');
             } if (timer==2) {
-                $('#guessy').html('Steady!');
+                $('#guessy,#guessy01').html('Steady!');
             } if(timer==3) {
-                $('#guessy').html('Go!');
+                $('#guessy,#guessy01').html('Go!');
             } if(timer==4){
                 //Carbrands Game!!
-                $('#guessy').html(function(){
+                $('#guessy,#guessy01').html(function(){
                     while(u--){
                         z=Math.floor(Math.random()*(u+1));
                         outputanimals.push(animals[z]);
@@ -110,7 +111,7 @@ $(document).ready(function(){
 
         //click button go to next question
         $('.btn').click(function(){
-            $('#guessy').html(function(){
+            $('#guessy,#guessy01').html(function(){
                 while(u--){
                     z=Math.floor(Math.random()*(u+1));
                     outputcartoons.push(cartoons[z]);
@@ -127,14 +128,14 @@ $(document).ready(function(){
             counter++;
             timer=counter;
             if(timer==1){
-                $('#guessy').html('Ready!');
+                $('#guessy,#guessy01').html('Ready!');
             } if (timer==2) {
-                $('#guessy').html('Steady!');
+                $('#guessy,#guessy01').html('Steady!');
             } if(timer==3) {
-                $('#guessy').html('Go!');
+                $('#guessy,#guessy01').html('Go!');
             } if(timer==4){
                 //Carbrands Game!!
-                $('#guessy').html(function(){
+                $('#guessy,#guessy01').html(function(){
                     while(u--){
                         z=Math.floor(Math.random()*(u+1));
                         outputcartoons.push(cartoons[z]);
@@ -157,7 +158,7 @@ $(document).ready(function(){
 
         //click button go to next question
         $('.btn').click(function(){
-            $('#guessy').html(function(){
+            $('#guessy,#guessy01').html(function(){
                 while(u--){
                     z=Math.floor(Math.random()*(u+1));
                     outputmovies.push(movies[z]);
@@ -174,14 +175,14 @@ $(document).ready(function(){
             counter++;
             timer=counter;
             if(timer==1){
-                $('#guessy').html('Ready!');
+                $('#guessy,#guessy01').html('Ready!');
             } if (timer==2) {
-                $('#guessy').html('Steady!');
+                $('#guessy,#guessy01').html('Steady!');
             } if(timer==3) {
-                $('#guessy').html('Go!');
+                $('#guessy,#guessy01').html('Go!');
             } if(timer==4){
                 //Carbrands Game!!
-                $('#guessy').html(function(){
+                $('#guessy,#guessy01').html(function(){
                     while(u--){
                         z=Math.floor(Math.random()*(u+1));
                         outputmovies.push(movies[z]);
@@ -204,7 +205,7 @@ $(document).ready(function(){
 
         //click button go to next question
         $('.btn').click(function(){
-            $('#guessy').html(function(){
+            $('#guessy,#guessy01').html(function(){
                 while(u--){
                     z=Math.floor(Math.random()*(u+1));
                     outputsuperheroes.push(superheroes[z]);
@@ -221,14 +222,14 @@ $(document).ready(function(){
             counter++;
             timer=counter;
             if(timer==1){
-                $('#guessy').html('Ready!');
+                $('#guessy,#guessy01').html('Ready!');
             } if (timer==2) {
-                $('#guessy').html('Steady!');
+                $('#guessy,#guessy01').html('Steady!');
             } if(timer==3) {
-                $('#guessy').html('Go!');
+                $('#guessy,#guessy01').html('Go!');
             } if(timer==4){
                 //Carbrands Game!!
-                $('#guessy').html(function(){
+                $('#guessy,#guessy01').html(function(){
                     while(u--){
                         z=Math.floor(Math.random()*(u+1));
                         outputsuperheroes.push(superheroes[z]);
@@ -251,7 +252,7 @@ $(document).ready(function(){
 
         //click button go to next question
         $('.btn').click(function(){
-            $('#guessy').html(function(){
+            $('#guessy,#guessy01').html(function(){
                 while(u--){
                     z=Math.floor(Math.random()*(u+1));
                     outputcountries.push(countries[z]);
@@ -268,14 +269,14 @@ $(document).ready(function(){
             counter++;
             timer=counter;
             if(timer==1){
-                $('#guessy').html('Ready!');
+                $('#guessy,#guessy01').html('Ready!');
             } if (timer==2) {
-                $('#guessy').html('Steady!');
+                $('#guessy,#guessy01').html('Steady!');
             } if(timer==3) {
-                $('#guessy').html('Go!');
+                $('#guessy,#guessy01').html('Go!');
             } if(timer==4){
                 //Carbrands Game!!
-                $('#guessy').html(function(){
+                $('#guessy,#guessy01').html(function(){
                     while(u--){
                         z=Math.floor(Math.random()*(u+1));
                         outputcountries.push(countries[z]);
@@ -303,7 +304,7 @@ $(document).ready(function(){
         setTimeout(function(){
             setInterval(function(){
                 tme++;
-                $('#timer').html(cntbck-tme);
+                $('#timer,#timer01').html(cntbck-tme);
                 if(cntbck-tme==0){
                     alert('Az idő lejárt!');
                     location.reload();
@@ -336,7 +337,7 @@ $(document).ready(function(){
         $('.goods').append('<p>'+result+'</p>');
         //count results
         dbg++;
-        $('#goodcounter').html(dbg);
+        $('#goodcounter,#goodcounter01').html(dbg);
         //limit clicks to 17
         if(dbg==17){
             $('.btn-success').prop('disabled','true');
@@ -349,7 +350,7 @@ $(document).ready(function(){
         $('.wrongs').append('<p>'+result+'</p>');
         //count results
         dbb++;
-        $('#wrongcounter').html(dbb);
+        $('#wrongcounter,#wrongcounter01').html(dbb);
         //limit clicks to 17
         if(dbb==17){
             $('.btn-danger').prop('disabled','true');
