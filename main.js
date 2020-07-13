@@ -3,26 +3,6 @@ $(document).ready(function(){
 
 
     $('#car').click(function(){
-
-        //Game types:
-        // 1. car brands
-        var carbrands=['Audi','Bmw','Maserati','Ford','Abarth','Fiat','McLaren','Aston Martin','Chevrolet','Alfa Romeo','Chrysler','Citroen','Dacia','Daewoo','Dodge','Ferrari','Honda','Hyundai','Jaguar','KIA','Lada','Lexus','Lancia','Lamborghini','Land Rover','Lotus','Maserati','Mazda','Mercades-AMG','Mercedes-Benz','Mini','Mitsubishi','Moszkvics','Nissan','Opel','Peugeot','Porsche','Renault','Rolls-Rolls','Rover','SAAB','Seat','Skoda','Subaru','Suzuki','Tesla','Toyota','Trabant','UAZ','Volkswagen','Volvo','Wartburg','Bugatti'];  
-        var outputcar=[];
-
-        var z=0;
-        var u=carbrands.length;
-
-        //click button go to next question
-        $('.btn').click(function(){
-            $('#guessy,#guessy01').html(function(){
-                while(u--){
-                    z=Math.floor(Math.random()*(u+1));
-                    outputcar.push(carbrands[z]);
-                    return carbrands.splice(z,1);
-                }
-            });
-        });
-
         //Ready, Steady, Go! function
 
         var counter=0;
@@ -32,14 +12,14 @@ $(document).ready(function(){
             counter++;
             timer=counter;
             if(timer==1){
-                $('#guessy,#guessy01').html('Ready!');
+                $('#guessy').html('Ready!');
             } if (timer==2) {
-                $('#guessy,#guessy01').html('Steady!');
+                $('#guessy').html('Steady!');
             } if(timer==3) {
-                $('#guessy,#guessy01').html('Go!');
+                $('#guessy').html('Go!');
             } if(timer==4){
                 //Carbrands Game!!
-                $('#guessy,#guessy01').html(function(){
+                $('#guessy').html(function(){
                     while(u--){
                         z=Math.floor(Math.random()*(u+1));
                         outputcar.push(carbrands[z]);
@@ -50,6 +30,25 @@ $(document).ready(function(){
         };
 
     }); //  <-- this is the end of #car .click!
+
+    //Game types:
+        // 1. car brands
+        var carbrands=['Audi','Bmw','Maserati','Ford','Abarth','Fiat','McLaren','Aston Martin','Chevrolet','Alfa Romeo','Chrysler','Citroen','Dacia','Daewoo','Dodge','Ferrari','Honda','Hyundai','Jaguar','KIA','Lada','Lexus','Lancia','Lamborghini','Land Rover','Lotus','Maserati','Mazda','Mercades-AMG','Mercedes-Benz','Mini','Mitsubishi','Moszkvics','Nissan','Opel','Peugeot','Porsche','Renault','Rolls-Rolls','Rover','SAAB','Seat','Skoda','Subaru','Suzuki','Tesla','Toyota','Trabant','UAZ','Volkswagen','Volvo','Wartburg','Bugatti'];  
+        var outputcar=[];
+
+        var z=0;
+        var u=carbrands.length;
+
+        //click button go to next question
+        $('.btn').click(function(){
+            $('#guessy').html(function(){
+                while(u--){
+                    z=Math.floor(Math.random()*(u+1));
+                    outputcar.push(carbrands[z]);
+                    return carbrands.splice(z,1);
+                }
+            });
+        });
 
 
     $('#animal').click(function(){
@@ -337,7 +336,7 @@ $(document).ready(function(){
         $('.goods').append('<p>'+result+'</p>');
         //count results
         dbg++;
-        $('#goodcounter,#goodcounter01').html(dbg);
+        $('#goodcounter').html(dbg);
         //limit clicks to 17
         if(dbg==17){
             $('.btn-success').prop('disabled','true');
@@ -350,7 +349,7 @@ $(document).ready(function(){
         $('.wrongs').append('<p>'+result+'</p>');
         //count results
         dbb++;
-        $('#wrongcounter,#wrongcounter01').html(dbb);
+        $('#wrongcounter').html(dbb);
         //limit clicks to 17
         if(dbb==17){
             $('.btn-danger').prop('disabled','true');

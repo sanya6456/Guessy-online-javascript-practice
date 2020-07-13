@@ -144,166 +144,6 @@ body {
   height: 100%;
 }
 
-@media only screen and (max-width: 850px) {
-  .header .gridrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.header .gridrow .resplayout {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 20% 65% 15%;
-      grid-template-rows: 20% 65% 15%;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-}
-
-@media only screen and (min-width: 850px) {
-  .header .gridrow .resplayout {
-    display: none;
-  }
-}
-
-.header .gridrow .resplayout .gametime {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  height: 100%;
-  width: 90%;
-}
-
-.header .gridrow .resplayout .gametime h2 {
-  font-size: 4rem;
-}
-
-.header .gridrow .resplayout .center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto auto 5% auto;
-  width: 100%;
-  height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.header .gridrow .resplayout .center .flexcenter {
-  border: 3px solid white;
-  width: 70%;
-  height: 40%;
-  margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media only screen and (max-width: 625px) {
-  .header .gridrow .resplayout .center .flexcenter {
-    width: 70%;
-    height: 35%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .header .gridrow .resplayout .center .flexcenter {
-    width: 80%;
-    height: 35%;
-  }
-}
-
-.header .gridrow .resplayout .center .flexcenter #guessy {
-  font-size: 4em;
-}
-
-@media only screen and (max-width: 780px) {
-  .header .gridrow .resplayout .center .flexcenter #guessy {
-    font-size: 3em;
-  }
-}
-
-@media only screen and (max-width: 625px) {
-  .header .gridrow .resplayout .center .flexcenter #guessy {
-    font-size: 2.5rem;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .header .gridrow .resplayout .center .flexcenter #guessy {
-    font-size: 2rem;
-  }
-}
-
-.header .gridrow .resplayout .secondgridrow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  height: 100%;
-  width: 100%;
-}
-
-.header .gridrow .resplayout .secondgridrow button {
-  display: block;
-  padding: 8px 20px;
-  border-radius: 16px;
-  font-size: 2.5rem;
-  font-weight: 500;
-  margin: 0 5%;
-}
-
-@media only screen and (max-width: 625px) {
-  .header .gridrow .resplayout .secondgridrow button {
-    font-size: 2rem;
-  }
-}
-
-.header .gridrow .resplayout .secondgridrow button:last-child {
-  padding: 7px 32px;
-  letter-spacing: 1px;
-  font-size: 2.7rem;
-}
-
-@media only screen and (max-width: 625px) {
-  .header .gridrow .resplayout .secondgridrow button:last-child {
-    font-size: 2.2rem;
-  }
-}
-
 .header .gridrow .firstgridrow {
   display: -ms-grid;
   display: grid;
@@ -316,7 +156,8 @@ body {
 
 @media only screen and (max-width: 850px) {
   .header .gridrow .firstgridrow {
-    display: none;
+    -ms-grid-columns: 10% 80% 10%;
+        grid-template-columns: 10% 80% 10%;
   }
 }
 
@@ -361,15 +202,50 @@ body {
 
 @media only screen and (max-width: 1060px) {
   .header .gridrow .firstgridrow .center .flexcenter {
-    width: 80%;
-    height: 40%;
+    width: 90%;
+    height: 35%;
   }
 }
 
 @media only screen and (max-width: 900px) {
   .header .gridrow .firstgridrow .center .flexcenter {
-    width: 75%;
+    width: 80%;
     height: 30%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .header .gridrow .firstgridrow .center .flexcenter {
+    width: 70%;
+    height: 35%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header .gridrow .firstgridrow .center .flexcenter {
+    width: 80%;
+    height: 30%;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .header .gridrow .firstgridrow .center .flexcenter {
+    width: 90%;
+    height: 25%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header .gridrow .firstgridrow .center .flexcenter {
+    width: 95%;
+    height: 25%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header .gridrow .firstgridrow .center .flexcenter {
+    width: 100%;
+    height: 25%;
   }
 }
 
@@ -404,6 +280,18 @@ body {
   }
 }
 
+@media only screen and (max-width: 850px) {
+  .header .gridrow .firstgridrow .center h2 {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header .gridrow .firstgridrow .center h2 {
+    font-size: 3rem;
+  }
+}
+
 .header .gridrow .firstgridrow .left, .header .gridrow .firstgridrow .right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -418,6 +306,38 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 850px) {
+  .header .gridrow .firstgridrow .left #rght, .header .gridrow .firstgridrow .left #lft, .header .gridrow .firstgridrow .right #rght, .header .gridrow .firstgridrow .right #lft {
+    display: none;
+  }
+}
+
+.header .gridrow .firstgridrow .left #goodcounter, .header .gridrow .firstgridrow .right #goodcounter {
+  color: green;
+}
+
+.header .gridrow .firstgridrow .left #wrongcounter, .header .gridrow .firstgridrow .right #wrongcounter {
+  color: red;
+}
+
+@media only screen and (max-width: 850px) {
+  .header .gridrow .firstgridrow .left #goodcounter, .header .gridrow .firstgridrow .left #wrongcounter, .header .gridrow .firstgridrow .right #goodcounter, .header .gridrow .firstgridrow .right #wrongcounter {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header .gridrow .firstgridrow .left #goodcounter, .header .gridrow .firstgridrow .left #wrongcounter, .header .gridrow .firstgridrow .right #goodcounter, .header .gridrow .firstgridrow .right #wrongcounter {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header .gridrow .firstgridrow .left #goodcounter, .header .gridrow .firstgridrow .left #wrongcounter, .header .gridrow .firstgridrow .right #goodcounter, .header .gridrow .firstgridrow .right #wrongcounter {
+    font-size: 2rem;
+  }
 }
 
 .header .gridrow .firstgridrow .left .flexleft, .header .gridrow .firstgridrow .left .flexcenter, .header .gridrow .firstgridrow .left .flexright, .header .gridrow .firstgridrow .right .flexleft, .header .gridrow .firstgridrow .right .flexcenter, .header .gridrow .firstgridrow .right .flexright {
@@ -476,6 +396,12 @@ body {
           align-items: center;
 }
 
+@media only screen and (max-width: 850px) {
+  .header .gridrow .firstgridrow .left .flexleft .goods, .header .gridrow .firstgridrow .left .flexleft .wrongs, .header .gridrow .firstgridrow .left .flexcenter .goods, .header .gridrow .firstgridrow .left .flexcenter .wrongs, .header .gridrow .firstgridrow .left .flexright .goods, .header .gridrow .firstgridrow .left .flexright .wrongs, .header .gridrow .firstgridrow .right .flexleft .goods, .header .gridrow .firstgridrow .right .flexleft .wrongs, .header .gridrow .firstgridrow .right .flexcenter .goods, .header .gridrow .firstgridrow .right .flexcenter .wrongs, .header .gridrow .firstgridrow .right .flexright .goods, .header .gridrow .firstgridrow .right .flexright .wrongs {
+    display: none;
+  }
+}
+
 .header .gridrow .firstgridrow .left .flexleft .goods p, .header .gridrow .firstgridrow .left .flexleft .wrongs p, .header .gridrow .firstgridrow .left .flexcenter .goods p, .header .gridrow .firstgridrow .left .flexcenter .wrongs p, .header .gridrow .firstgridrow .left .flexright .goods p, .header .gridrow .firstgridrow .left .flexright .wrongs p, .header .gridrow .firstgridrow .right .flexleft .goods p, .header .gridrow .firstgridrow .right .flexleft .wrongs p, .header .gridrow .firstgridrow .right .flexcenter .goods p, .header .gridrow .firstgridrow .right .flexcenter .wrongs p, .header .gridrow .firstgridrow .right .flexright .goods p, .header .gridrow .firstgridrow .right .flexright .wrongs p {
   margin: 2% 0 0 0;
 }
@@ -506,12 +432,6 @@ body {
           align-items: center;
 }
 
-@media only screen and (max-width: 850px) {
-  .header .gridrow .secondgridrow {
-    display: none;
-  }
-}
-
 .header .gridrow .secondgridrow button {
   display: block;
   padding: 8px 20px;
@@ -533,6 +453,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .header .gridrow .secondgridrow button {
+    font-size: 1.5rem;
+  }
+}
+
 .header .gridrow .secondgridrow button:last-child {
   padding: 7px 32px;
   letter-spacing: 1px;
@@ -542,6 +468,12 @@ body {
 @media only screen and (max-width: 1060px) {
   .header .gridrow .secondgridrow button:last-child {
     font-size: 2.2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header .gridrow .secondgridrow button:last-child {
+    font-size: 1.6rem;
   }
 }
 
@@ -560,6 +492,150 @@ body {
 @media only screen and (max-width: 900px) {
   #guessy {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #guessy {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #guessy {
+    font-size: 1.2rem;
+  }
+}
+
+#car img {
+  width: 40%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #car img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #car img {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #car img {
+    width: 70%;
+  }
+}
+
+#animal img {
+  width: 40%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #animal img {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #animal img {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #animal img {
+    width: 70%;
+  }
+}
+
+#cartoon img {
+  width: 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #cartoon img {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #cartoon img {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #cartoon img {
+    width: 80%;
+  }
+}
+
+#movie img {
+  width: 60%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #movie img {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #movie img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #movie img {
+    width: 90%;
+  }
+}
+
+#superhero img {
+  width: 70%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #superhero img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #superhero img {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #superhero img {
+    width: 100%;
+  }
+}
+
+#country img {
+  width: 70%;
+}
+
+@media only screen and (max-width: 1200px) {
+  #country img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #country img {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #country img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */
